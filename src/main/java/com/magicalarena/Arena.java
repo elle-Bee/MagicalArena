@@ -15,6 +15,13 @@ public class Arena {
 
     // Method which starts fight between player1 and player2
     public void fight() {
+        //Determining which is the player with lower health to attack first
+        if (player1.getHealth() > player2.getHealth()) {
+            Player temp = player1;
+            player1 = player2;
+            player2 = temp;
+        }
+
         // Fight continues until one of the player dies
         while (player1.isAlive() && player2.isAlive()) {
             // Player1 attacks first
