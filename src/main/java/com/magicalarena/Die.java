@@ -1,14 +1,16 @@
 package com.magicalarena;
 
-public class Dice {
+import java.util.Random;
+
+public class Die {
 
     private Random rand;
 
-    public Dice() {
+    public Die() {
         this.rand = new Random();
     }
 
     public int roll() {
-        return random.nextInt(6) + 1;
+        return rand.nextInt(6) + 1;
     }
 }
