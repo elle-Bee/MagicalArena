@@ -31,13 +31,13 @@ public class Player {
     }
 
     // Method to calculate attack damage
-    public int calculateAttackDamage(int diceRoll) {
-        return this.attack * diceRoll;
+    public int calculateAttackDamage(int dieRoll) {
+        return this.attack * dieRoll;
     }
 
     // Method to calculate defense strength
-    public int calculateDefenseStrength(int diceRoll) {
-        return this.strength * diceRoll;
+    public int calculateDefenseStrength(int dieRoll) {
+        return this.strength * dieRoll;
     }
 
     // Method to update damage to health

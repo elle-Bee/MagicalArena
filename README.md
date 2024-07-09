@@ -21,6 +21,7 @@
 3. The game ends when a player's health reaches zero.gradle test
 
 ## Project Structure
+
 - `src/main/java/com/magicalarena/`: has the main Java source files and contains.
   - Arena.java
   - Die.java
@@ -38,3 +39,55 @@
    ```bash
    cd magical-arena
    ```
+2. **Make the Scripts Executable**:
+   ```bash
+   chmod +x run_game.sh
+   chmod +x run_tests.sh
+   ```
+3. **Running the scripts**:
+    - To run the game:
+        ```bash
+        ./run_game.sh
+        ```
+    - To run tests:
+        ```bash
+        ./run_tests.sh
+        ```
+
+## Class Description
+
+### Player
+- **Attributes** : health, strength, attack
+- **Methods** :
+  - `getHealth()` : Returns the player's health.
+  - `getStrength()` : Returns the player's strength.
+  - `getAttack()` : Returns the player's attack value.
+  - `takeDamage(int damage)` : Reduces the player's health by the specified damage.
+  - `calculateAttackDamage(int dieRoll)` : Calculates the attack damage based on the die roll.
+  - `calculateDefenseStrength(int dieRoll)` : Calculates the defense strength based on the die roll.
+  - `isAlive()` : Returns whether the player is still alive.
+
+### Die
+- **Methods** : 
+  - `roll()`: Simulates rolling a six-sided die and returns the result.
+
+### Arena
+- **Attributes** : player1, player2, die, round
+- **Methods** :
+  - `fight()` : Starts the combat between the two players until one dies.
+  - `playRound(Player attacker, Player defender)` : Simulates a round of combat between the attacker and defender.
+
+### Main
+- **Methods** :
+  - main(String[] args): Entry point for the game. Initializes players and starts the game.
+
+## Test Classes
+
+### PlayerTest
+Contains unit tests for the `Player` class, testing various functionalities like taking damage and attribute retrieval.
+
+### DieTest
+Contains unit tests for the `Die` class, testing the randomness of the die rolls and that the number returned belongs to the range specified.
+
+### ArenaTest
+Contains unit tests for the `Arena` class, testing the combat logic and round execution.
