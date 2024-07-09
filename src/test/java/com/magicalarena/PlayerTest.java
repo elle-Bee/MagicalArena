@@ -1,5 +1,8 @@
 package com.magicalarena;
 
+/**
+ * The PlayerTest class contains test methods for the Player class.
+ */
 public class PlayerTest {
     public static void main(String[] args) {
         testPlayerInitialization();
@@ -10,7 +13,9 @@ public class PlayerTest {
         testHealthBoundaries();
     }
 
-    // Test the initialization of Player object
+    /**
+     * Tests the initialization of Player objects.
+     */
     public static void testPlayerInitialization() {
         Player player1 = new Player("TestPlayer1", 100, 10, 5);
         Player player2 = new Player("TestPlayer2", 50, 8, 12);
@@ -28,7 +33,9 @@ public class PlayerTest {
         System.out.println("testPlayerInitialization passed");
     }
 
-    // Test the calculation of attack damage
+    /**
+     * Tests the calculation of attack damage.
+     */
     public static void testCalculateAttackDamage() {
         Player player1 = new Player("TestPlayer1", 100, 10, 5);
         Player player2 = new Player("TestPlayer2", 50, 8, 12);
@@ -39,7 +46,9 @@ public class PlayerTest {
         System.out.println("testCalculateAttackDamage passed");
     }
 
-    // Test the calculation of defense strength
+    /**
+     * Tests the calculation of defense strength.
+     */
     public static void testCalculateDefenseStrength() {
         Player player1 = new Player("TestPlayer1", 100, 10, 5);
         Player player2 = new Player("TestPlayer2", 50, 8, 12);
@@ -50,7 +59,9 @@ public class PlayerTest {
         System.out.println("testCalculateDefenseStrength passed");
     }
 
-    // Test the damage dealt to player's health
+    /**
+     * Tests the damage dealt to player's health.
+     */
     public static void testTakeDamage() {
         Player player1 = new Player("TestPlayer1", 100, 10, 5);
         Player player2 = new Player("TestPlayer2", 50, 8, 12);
@@ -68,7 +79,9 @@ public class PlayerTest {
         System.out.println("testTakeDamage passed");
     }
 
-    // Test the player's alive status based on health
+    /**
+     * Tests the player's alive status based on health.
+     */
     public static void testIsAlive() {
         Player player1 = new Player("TestPlayer1", 100, 10, 5);
         Player player2 = new Player("TestPlayer2", 50, 8, 12);
@@ -84,7 +97,9 @@ public class PlayerTest {
         System.out.println("testIsAlive passed");
     }
 
-    // Test health boundary conditions to ensure health doesn't drop below 0
+    /**
+     * Tests health boundary conditions to ensure health doesn't drop below 0.
+     */
     public static void testHealthBoundaries() {
         Player player1 = new Player("TestPlayer1", 100, 10, 5);
         Player player2 = new Player("TestPlayer2", 50, 8, 12);
