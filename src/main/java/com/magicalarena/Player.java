@@ -11,13 +11,13 @@ public class Player {
         this.attack = attack;
     }
 
-    // Getters and Setters
-    public int getHealth() {
-        return health;
+    // Getters
+    public String getName() {
+        return name;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public int getHealth() {
+        return health;
     }
 
     public int getStrength() {
@@ -28,11 +28,31 @@ public class Player {
         return attack;
     }
 
-    public int attack() {
-
+    // Setters
+    public void setHealth(int health) {
+        this.health = health;
     }
 
-    public int defense() {
+    // Method to calculate attack damage
+    public int calculateAttackDamage(int diceRoll) {
+        return this.attack * diceRoll;
+    }
 
+    // Method to calculate defense strength
+    public int calculateDefenseStrength(int diceRoll) {
+        return this.strength * diceRoll;
+    }
+
+    // Method to update damage to health
+    public void takeDamage(int damage) {
+        this.health -= damage;
+        if (this.health < 0) {
+            this.health = 0;  // Ensure health doesn't go below 0
+        }
+    }
+
+    // Method to check if player is alive
+    public boolean isAlive() {
+        return this.health > 0;
     }
 }
