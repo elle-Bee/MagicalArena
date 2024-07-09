@@ -37,7 +37,7 @@ Magical Arena is a simple Java-based game where two players engage in combat in 
 
 1. **Go into the repository**:
    ```bash
-   cd magical-arena
+   cd MagicalArena
    ```
 2. **Make the Scripts Executable**:
    ```bash
