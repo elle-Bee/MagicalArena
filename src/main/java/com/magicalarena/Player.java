@@ -6,7 +6,7 @@ public class Player {
     private int strength;
     private int attack;
 
-    public Player(int name, int health, int strength, int attack) {
+    public Player(String name, int health, int strength, int attack) {
         this.name = name;
         this.health = health;
         this.strength = strength;

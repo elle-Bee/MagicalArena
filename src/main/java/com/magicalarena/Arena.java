@@ -13,7 +13,7 @@ public class Arena {
         this.round = 0;
     }
 
-    public void fight {
+    public void fight() {
         while (player1.isAlive() && player2.isAlive()) {
             playRound(player1, player2);
 
@@ -36,17 +36,20 @@ public class Arena {
         int attackDamage = attacker.calculateAttackDamage(attackRoll);
         int defenseStrength = defender.calculateDefenseStrength(defenseRoll);
         int effectiveDamage = attackDamage - defenseStrength;
-
-        if (effectiveDamage > 0) {
-            defender.takeDamage(damageDealt);
-        }
         round++;
 
-        System.out.println("Round" + round);
+        System.out.println("ROUND " + round);
         System.out.println(attacker.getName() + " attacks and rolls die. Die roll: " + attackRoll + ". ");
         System.out.println(defender.getName() + " defends and rolls die. Die roll: " + defenseRoll + ".");
         System.out.println("Attack Damage is " + attackRoll + "*" + attacker.getAttack() + "=" + attackDamage + ".");
         System.out.println("Defending Strength is " + defenseRoll + "*" + defender.getStrength() + "=" + defenseStrength + ".");
-        System.out.println(defender.getName() + "'s health reduced by " + effectiveDamage + " to " + defender.getHealth());
+
+        if (effectiveDamage > 0) {
+            defender.takeDamage(effectiveDamage);
+            System.out.println(defender.getName() + "'s health reduced by " + effectiveDamage + " to " + defender.getHealth() + ".");
+        } else {
+            System.out.println(defender.getName() + "'s health reduced by nothing and remains at " + defender.getHealth() + ".");
+        }
+        System.out.println();
     }
 }
