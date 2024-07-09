@@ -3,7 +3,6 @@ package com.magicalarena;
 import java.util.Random;
 
 public class Die {
-
     private Random rand;
 
     public Die() {
