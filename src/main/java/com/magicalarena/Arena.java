@@ -34,7 +34,7 @@ public class Arena {
     }
 
     // Method to attack one round of attack + defense and display the workings
-    private void playRound(Player attacker, Player defender) {
+    public void playRound(Player attacker, Player defender) {
         int attackRoll = die.roll();
         int defenseRoll = die.roll();
 
